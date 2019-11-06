@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>GIT</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="Yassir moghder" content="Introducción a Git" />
+</head>
+<body>
+<h1>Diferencias entre Sistema de control de versiones locales, centralizados y distribuidos:</h1>
+
+<h2>Enfoque Centralizado</h2>
+
+<em><p>Cuando se desarrollaron los sistemas de control de versiones, muchos de ellos se hicieron en esquema cliente-servidor, con lo que el desarrollo de las herramientas está claramente diferenciado entre:</p></em>
+ <ul>
+    <li><b>el cliente</b> que es la aplicación que se conecta al servidor y mantiene una copia local del repositorio, así como se encarga, generalmente de la corrección de conflictos y la mayoría de lógica del sistema.</li>
+
+    <li><b>el servidor</b> que es el sistema que toma los datos del cliente y los almacena a espera de una o múltiples peticiones de esos datos. Este sistema se encargaría del almacenamiento de las versiones, control de concurrencia, bloqueos y otras características parecidas a las de las bases de datos.</li>
+</ul>
+
+<p>¿Qué limitaciones y características posee? Haremos una breve lista:<p>
+<ul>
+    <li>El sistema servidor es un repositorio, como los que mantienen los clientes, pero perfectamente sincronizado y sin que dé lugar a conflictos. Es la copia maestra de los datos.</li>
+
+    <li>Cuando un sistema web quiere hacer un listado, puede tomar los datos de este servidor y siempre serán seguros, con lo que no tendrá que resolver conflictos, ni tendrá que hacer mezclas.</li>
+
+    <li>Una copia local debe de poder mezclarse con el repositorio central cuando queramos publicar un conjunto de cambios o cuando queramos tomar la última versión publicada en concordancia con nuestra copia local.</li>
+
+    <li>Es normal ver en muchos de estos sistemas ramificaciones, versiones, etiquetas, o similares, a modo de tener varias copias según nos interese. Estas ramificaciones están en el servidor y en algunos casos puede llegar a ser muy costosa su diferenciación.</li>
+</ul>
+<h2>Enfoque Distribuido</h2>
+
+<em><p>Desarrolladores como Linus Torvalds, Eric S. Raymond y otros más, han desarrollado sistemas distribuidos de control de versiones tales como git, Baazaar, Mercurial, darcs, … estos sistemas se destacan por haber sido desarrollados en un formato distribuido, esto quiere decir que, en sí, no hay un servidor que mantenga una copia del repositorio, sino que está mantenida entre los clientes que estén en uso del repositorio y, al igual que los clientes P2P, mientras más desarrolladores haya conectados, mejor conectividad habrá entre todos.</p></em>
+
+<em><p>Esto da una serie de ventajas al sistema centralizado, como son:</p></em>
+<ul>
+    <li>Disponer de forma distribuida de la información del repositorio al completo, tanto de forma local, como a través de los demás componentes del grupo.</li>
+
+    <li>Cada cambio se va replicando entre los demás equipos distribuidos, a modo de que puedan emplear esos datos y actualizarlos en sus sistemas.</li>
+
+    <li>El sistema de control de versiones distribuido ha sido pensado con la forma de trabajo basada en ramas, unión central en una sola versión (trunk) y liberaciones (o tags). Con lo que cada rama puede identificarse como cada copia distribuida que se use.</li>
+
+   <li>Una máquina servidora puede emplearse, al estar siempre conectada, como otro punto de sincronización, con la ventaja de que, aunque cayera, mientras haya más miembros conectados, el sistema siempre se mantiene activo y con buen ancho de banda.
+</li> 
+</ul>
+</body>
+</html>
