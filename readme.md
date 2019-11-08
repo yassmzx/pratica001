@@ -1,6 +1,6 @@
 "mi primer documento en github"
 
-
+INDRODUCCION GIT
 comandos basicos:
 
 git init: Este comando se usa para crear un nuevo repertorio GIT
